@@ -7,11 +7,23 @@
 	<body class="main-page">
 	<link rel="stylesheet" type="text/css" href="css/vivify.css">
 		<header>
-			<a href="/login.html" title="Login">Login</a>
-			<a href="/register.html" title="Register">Register</a>
+			<a href="index.php" title="Login">Home</a>
 		</header>
 		<main>
-			<h1>Dobrodošao</h1>
+			<h1>Registracija</h1>
+			<form action="register_action.php">
+				<label>Ime</label>
+				<input type="text" name="name"></input>
+
+				<label>Prezime</label>
+				<input type="text" name="surrname"></input>
+				<label>Email</label>
+				<input type="email" name="email"></input>
+				<label>Lozinka</label>
+				<input type="password" name="password"></input>
+
+				<button type="submit">Register</button>
+			</form>
 		</main>
 		<footer>
 			<?php 

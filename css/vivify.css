@@ -24,18 +24,45 @@
 
 .main-page > header > a {
 	padding: 2pt;
+	color: #2196f3;
 }
 
 .main-page > main {
 	width: 100%;
 	flex-grow: 1;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	margin: auto;
 	align-items: center;
 	justify-content: space-around;
 	vertical-align: middle;
 }
+
+.main-page > main > form {
+	width: 100%;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.main-page > main > form > label, input {
+	float: left;
+	padding: 5px;
+}
+.main-page > main > form > button {
+	padding: 10px;
+	background-color: #2196f3;
+	color: white;
+	border: 2px solid;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: inherit;
+
+}
+
 .main-page > footer {
 	width: 100%;
 	flex-grow: 1;
@@ -45,7 +72,7 @@
 	align-items: center;
 	justify-content: space-around;
 	bottom: 0;
-	position: absolute;
+	
 	border-color: darkgrey;
 	border-width: 1px;
 	border-style: solid;
