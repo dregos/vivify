@@ -1,7 +1,7 @@
 .main-page {
 	font-family: "Helvetica", "Arial", sans-serif;
-	font-size: 14pt;
-	line-height: 1.428;
+	font-size: 12pt;
+	line-height: 1.228;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -9,6 +9,7 @@
 	margin: auto;
 	border-color: darkgrey;
 	padding: 1px;
+	width: 400px;
 }
 
 .main-page > header {
@@ -28,7 +29,6 @@
 }
 
 .main-page > main {
-	width: 100%;
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
@@ -36,6 +36,10 @@
 	align-items: center;
 	justify-content: space-around;
 	vertical-align: middle;
+	border-color: darkgrey;
+	border-width: 1px;
+	border-style: solid;
+	height: 500px;
 }
 
 .main-page > main > form {
@@ -49,7 +53,7 @@
 }
 
 .main-page > main > form > label, input {
-	float: left;
+	
 	padding: 5px;
 }
 .main-page > main > form > button {
@@ -72,7 +76,7 @@
 	align-items: center;
 	justify-content: space-around;
 	bottom: 0;
-	
+	position: relative;
 	border-color: darkgrey;
 	border-width: 1px;
 	border-style: solid;

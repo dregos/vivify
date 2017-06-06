@@ -7,8 +7,8 @@
 	<body class="main-page">
 	<link rel="stylesheet" type="text/css" href="css/vivify.css">
 		<header>
-			<a href="/login.html" title="Login">Login</a>
-			<a href="/register.html" title="Register">Register</a>
+			<a href="login.php" title="Login">Login</a>
+			<a href="register.php" title="Register">Register</a>
 		</header>
 		<main>
 			<h1>Dobrodošao</h1>
