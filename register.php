@@ -12,22 +12,21 @@
 		<main>
 			<h1>Registracija</h1>
 			<form action="register_action.php">
-				<div>
-					<label>Ime</label>
-					<input type="text" name="name"></input>
-				</div>
-				<div>
-					<label>Prezime</label>
-					<input type="text" name="surrname"></input>
-				</div>
-				<div>
-					<label>Email</label>
-					<input type="email" name="email"></input>
-				</div>
-				<div>
-					<label>Lozinka</label>
-					<input type="password" name="password"></input>
-				</div>
+				<label>Ime</label>
+				<input type="text" name="name"></input>
+
+
+				<label>Prezime</label>
+				<input type="text" name="surrname"></input>
+
+
+				<label>Email</label>
+				<input type="email" name="email"></input>
+
+
+				<label>Lozinka</label>
+				<input type="password" name="password"></input>
+
 				<button type="submit">Register</button>
 			</form>
 		</main>
