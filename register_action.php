@@ -1,6 +1,6 @@
 <?php
 
-/* CLASS CODE BLOCK */	
+/* CLASS CODE BLOCK */
 	class Log{
 		public $logFile;
 		public $fileName;
@@ -12,7 +12,7 @@
 		function __construct(){
 			/* inicializiraj log file*/
 			//echo("inicializacija Log classa\n");
-			$this->fileName = date("Y-m-d",time()). ".log";
+			$this->fileName = gmdate("Y-m-d",time()). ".log";
 			//echo("<br>");
 			//var_dump($this->fileName);
 			$this->filePath = $this->logDirectory . $this->fileName;
@@ -22,9 +22,7 @@
 		}
 
 		public function writeLog($logMsg, $lineNumber){
-			echo("<br>");
-			echo("pišem log");
-			$this->timeStamp = date("Y-m-d H:i:s",time());
+			$this->timeStamp = gmdate("Y-m-d H:i:s",time());
 			$logMsg = $this->timeStamp . " --> " . $logMsg;
 			$logMsg = $lineNumber == null ? $logMsg : $logMsg . " in line $lineNumber.";
 			file_put_contents($this->filePath, $logMsg."\n", FILE_APPEND);
@@ -73,15 +71,10 @@ try{
 
 	$log = new Log();
 
-	//$log->writeLog("Test Log line1",1);
-	
-
 	$reg = new Register($_GET);
-	if($reg->stopExecutingCode) { 
-		if($reg->error!=""){
-			$log->writeLog("Exception: ". $reg->error);
-		}
-		die(); 
+	if($reg->stopExecutingCode) {
+		if($reg->error!=""){ $log->writeLog("Exception: ". $reg->error);	}
+		die();
 	}
 
 	$log->writeLog("Submitted name:".$reg->name,null);
@@ -92,34 +85,9 @@ try{
 
 }catch(Exception $ex){
 	$log->writeLog($ex->getMessage, $ex->getLine());
-	
+
 }
-/*
-	$reg = new Register($_GET);
-	if($reg->stopExecutingCode) {
 
-		die();
-	}
-
-*/
-
-
-/*
-	$name = $_GET["name"];
-	$surrname = $_GET["surrname"];
-	$email = $_GET["email"];
-	$password = $_GET["password"];
-
-	$userlist = fopen("userlist.txt", "w");
-
-
-	foreach($userlist as $line) {
-	   echo $line. "\n";
-	}
-
-	//fwrite($userlist, $name."|".$surrname."|".$email."|".$password);
-
-*/
 	die();
 
 
