@@ -82,10 +82,11 @@ try{
 	$log->writeLog("Submitted email:".$reg->email,null);
 	$log->writeLog("Submitted password:".$reg->password,null);
 
+	die();
 
 }catch(Exception $ex){
 	$log->writeLog($ex->getMessage, $ex->getLine());
-
+	die();
 }
 
 	die();
