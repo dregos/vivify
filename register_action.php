@@ -77,6 +77,8 @@ try{
 		die();
 	}
 
+	
+
 	$log->writeLog("Submitted name:".$reg->name,null);
 	$log->writeLog("Submitted last name:".$reg->surrname,null);
 	$log->writeLog("Submitted email:".$reg->email,null);
